@@ -1,6 +1,6 @@
 html,
 body {
-  background-color: white;
+  background-color: black;
   margin: 0px;
   padding: 0;
   /* overflow: hidden; */
@@ -20,6 +20,10 @@ body {
   grid-template-rows: 1fr;
   height: 100vh;
   margin: 0;
+}
+.header {
+  visibility: hidden;
+  display: none;
 }
 #logo {
   font-size: 64px;
@@ -46,7 +50,7 @@ body {
   color: BLACK;
   display: block;
 }
-.content {
+.content-contact {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,37 +58,25 @@ body {
   background-color: black;
   color: white;
 }
-.content p,
-.image {
+.content-contact p {
   margin: auto;
 
   font-size: 24px;
 }
-.content p {
+.content-contact p {
   line-height: 1.5;
   padding-left: 2em;
   margin-left: 20px;
 }
-.image > img {
-  max-width: 80%;
-  max-height: auto;
-  margin-left: 10%;
-  border: 1px solid white;
-}
 
-form {
+.content-contact form {
   width: 50%;
   background-color: Black;
   margin: auto;
   font-size: 1.5em;
 }
-/*form textarea {
-    font-size: 2em;
-    font-family: impact;
-    margin: auto;
-    width: 100%;
-}*/
-input[type="text"],
+
+.content-contact input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea {
@@ -100,7 +92,7 @@ textarea {
   border-bottom: 3px solid white;
 }
 
-input[type="submit"] {
+.content-contact input[type="submit"] {
   display: block;
   padding: 0.5em;
   background-color: black;
@@ -109,3 +101,5 @@ input[type="submit"] {
 
   margin: 0.5em auto;
 }
+
+
