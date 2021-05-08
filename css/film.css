@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+html,
+body {
+  background-color: black;
+  margin: 0px;
+  padding: 0;
+  font-family: 'Rubik', sans-serif
+  /* overflow: hidden; */
+}
+body {
+  min-height: 100vh;
+}
+
+.container > div {
+  /* font-size: 2em; */
+  height: 100%;
+  width: 100%;
+  /* margin-top: 10%; */
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
+  height: 100vh;
+  margin: 0;
+}
+.header {
+  visibility: hidden;
+  display: none;
+}
+#logo {
+  font-size: 64px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 25%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 32px;
+  line-height: 100px;
+  text-align: center;
+  color: BLACK;
+  display: block;
+}
+.content-film {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* height:100vh; */
+  color: white;
+}
+.item-film {
+  margin: 5% auto;
+  text-align: center;
+  padding: 40px;
+  border: 3px solid white;
+  border-bottom: 2px solid white;
+}
+.item-film > h1 {
+  font-weight: 400;
+  font-size: 4em;
+}
+.item-film > h3 {
+  font-size: 2em;
+}
+
+.image > img {
+  max-width: 80%;
+  max-height: auto;
+  margin-left: 10%;
+  border: 1px solid white;
+}
+
+@media only screen and (max-width: 1600px) {
+  .sidenav a {
+    font-size: 24px;
+    line-height: 80px;
+  }
+  .item-film {
+    padding: 10px;
+    width: 90%;
+  }
+  .item-film > h1 {
+    font-size: 3em;
+  }
+  .item-film > h3 {
+    font-size: 1em;
+  }
+  .item-film iframe {
+    width: 640px;
+    height: 480px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .content-film {
+    margin-top: 100px;
+    grid-template-columns: 1fr;
+  }
+  .item-film {
+    padding: 2px;
+    width: 90%;
+  }
+  .item-film > h1 {
+    font-size: 1.5em;
+  }
+  .item-film > h3 {
+    font-size: 1em;
+  }
+
+  .sidebar {
+    display: none;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+    background-color: #fff;
+
+    /* position: relative; */
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+  }
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  .header li a {
+    display: block;
+    text-align: center;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+    color: black;
+  }
+
+  .header li a:hover {
+    background-color: #f4f4f4;
+  }
+
+  .header .logo {
+    display: block;
+    float: left;
+    font-size: 3em;
+    padding: 10px 20px;
+    text-emphasis: none;
+    text-decoration: none;
+    color: black;
+  }
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+  }
+  .header a {
+    font-size: 1.5em;
+  }
+
+  .header .menuIcon {
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 80%;
+    padding: 28px 20px;
+    position: absolute;
+    user-select: none;
+  }
+
+  .header .menuIcon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: all 0.2s ease-out;
+    width: 18px;
+  }
+  .header .menuIcon .navicon:before,
+  .header .menuIcon .navicon:after {
+    background: #333;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+  }
+  .header .menuIcon .navicon:before {
+    top: 5px;
+  }
+  .header .menuIcon .navicon:after {
+    top: -5px;
+  }
+  /* 3 */
+  .header .menuButton {
+    display: none;
+  }
+  .header .menuButton:checked ~ .menu {
+    max-height: 60vh;
+  }
+  .header .menuButton:checked ~ .menuIcon .navicon {
+    background: transparent;
+  }
+  .header .menuButton:checked ~ .menuIcon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  .header .menuButton:checked ~ .menuIcon .navicon:after {
+    transform: rotate(45deg);
+  }
+
+  .header .menuButton:checked ~ .menuIcon:not(.steps) .navicon::before,
+  .header .menuButton:checked ~ .menuIcon:not(.steps) .navicon::before {
+    top: 0;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .item-film iframe {
+    width: 320px;
+    height: 240px;
+  }
+}
+/* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
