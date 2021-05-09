@@ -59,12 +59,7 @@ body {
   color: BLACK;
   display: block;
 }
-.content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  /* height:100vh; */
-  color: white;
-}
+
 .content-photo {
   background-color: black;
   display: grid;
