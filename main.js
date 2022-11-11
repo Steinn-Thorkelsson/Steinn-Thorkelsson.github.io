@@ -55,9 +55,7 @@ class Kula {
               if (kulur[i].id === this.id) {
                 kulur.splice(i, 1);
                 stig += 1;
-                if(window.navigator.vibrate(100)){
-                  console.log("Vibrate");
-                }
+                window.navigator.vibrate(100);
               }
             }
           }
