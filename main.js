@@ -67,7 +67,7 @@ class Kula {
 
 const kulur = [];
 let id = 0;
-let lengd = 3;
+let lengd = 20;
 
 while (kulur.length < lengd) {
   let kula = new Kula(random(10, width - 20), random(10, height - 20), id);
